@@ -1,4 +1,4 @@
-# Contributing to Bitscoper
+# Contributing to Bitscoper DotFiles
 
 Thank you for considering contributing to this project! We appreciate your time and effort. Please follow the guidelines below to ensure a smooth collaboration.
 
