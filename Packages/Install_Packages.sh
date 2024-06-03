@@ -34,6 +34,8 @@ sudo pacman -S --needed - <./pacman_Packages.txt
 
 yay -S --needed - <./AUR_Packages.txt
 
+sudo pacman -Rsn - <./Unwanted_pacman_Packages.txt
+
 sudo pacman -Rns $(pacman -Qtdq)
 
 yay -Scc
