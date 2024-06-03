@@ -1,2 +1,7 @@
-# bitscoper_DotFiles
+<div align="center">
+
+# Bitscoper DotFiles
+
 WorkStation
+
+</div>
