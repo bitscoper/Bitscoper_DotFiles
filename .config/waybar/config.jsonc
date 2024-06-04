@@ -11,15 +11,15 @@
         "clock"
     ],
     "modules-right": [
-        "idle_inhibitor",
-        "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
-        "backlight",
         "keyboard-state",
+        "pulseaudio",
+        "backlight",
+        "idle_inhibitor",
+        "power-profiles-daemon",
         "battery"
     ],
     "hyprland/workspaces": {
@@ -28,6 +28,8 @@
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
+    "tray": {},
+    "hyprland/window": {},
     "clock": {
         "timezone": "Asia/Dhaka",
         "format": "{:%I:%M %p}",
@@ -35,22 +37,14 @@
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
-    "keyboard-state": {
-        "capslock": true,
-        "numlock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": true
+    "network": {
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "",
+        "format-linked": "(No IP)",
+        "format-disconnected": "Disconnected",
+        "format-alt": "{ipaddr}",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>Interface: {ifname}\nESSID: {essid}\nGateway: {gwaddr}\nIP Address: {ipaddr}\nCIDR: {cidr}</small></tt>"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -71,50 +65,14 @@
         ],
         "tooltip": true
     },
-    "backlight": {
-        "format": "{percent}% ",
-        "tooltip": true
-    },
-    "battery": {
-        "states": {
-            "good": 80,
-            "warning": 25,
-            "critical": 10
-        },
-        "format": "{capacity}% {icon}",
-        "format-plugged": "{capacity}% ",
-        "format-charging": "{capacity}% ",
-        "format-good": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-alt": "{time} {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        "tooltip": true
-    },
-    "power-profiles-daemon": {
-        "format": "{icon}",
+    "keyboard-state": {
+        "capslock": true,
+        "numlock": true,
+        "format": "{name} {icon}",
         "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        },
-        "tooltip": true,
-        "tooltip-format": "Profile: {profile}\nDriver: {driver}"
-    },
-    "network": {
-        "format-wifi": " {signalStrength}%",
-        "format-ethernet": "",
-        "format-linked": "(No IP)",
-        "format-disconnected": "Disconnected",
-        "format-alt": "{ipaddr}",
-        "tooltip": true,
-        "tooltip-format": "<tt><small>Interface: {ifname}\nESSID: {essid}\nGateway: {gwaddr}\nIP Address: {ipaddr}\nCIDR: {cidr}</small></tt>"
+            "locked": "",
+            "unlocked": ""
+        }
     },
     "pulseaudio": {
         "scroll-step": 1,
@@ -139,5 +97,49 @@
         },
         "tooltip": true,
         "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{percent}% ",
+        "tooltip": true
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": true
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        },
+        "tooltip": true,
+        "tooltip-format": "Profile: {profile}\nDriver: {driver}"
+    },
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 25,
+            "critical": 10
+        },
+        "format": "{capacity}% {icon}",
+        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        "format-good": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": true
     }
 }
