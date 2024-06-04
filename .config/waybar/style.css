@@ -23,9 +23,7 @@ window#waybar {
 }
 
 .modules-center {
-  background-color: rgba(33, 33, 33, 0.95);
-  padding: 0 10px;
-  margin: 2px 0 0 0;
+  background-color: transparent;
 }
 
 .modules-left {
@@ -33,9 +31,15 @@ window#waybar {
   margin: 2px 0 0 0;
 }
 
+#clock {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
 #workspaces {
   background-color: rgba(33, 33, 33, 0.95);
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 #workspaces button {
@@ -52,6 +56,7 @@ window#waybar {
 #tray {
   background-color: rgba(33, 33, 33, 0.95);
   padding: 0 2px;
+  margin: 0 10px 0 0;
 }
 
 #tray * {
@@ -61,7 +66,10 @@ window#waybar {
 #window {
   background-color: rgba(33, 33, 33, 0.95);
   padding: 0 10px;
-  margin: 0 10px;
+}
+
+#keyboard-state {
+  margin: 0;
 }
 
 #idle_inhibitor.activated,

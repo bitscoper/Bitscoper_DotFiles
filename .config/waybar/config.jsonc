@@ -3,25 +3,32 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
+        "clock",
         "hyprland/workspaces",
         "tray",
         "hyprland/window"
     ],
-    "modules-center": [
-        "clock"
-    ],
+    "modules-center": [],
     "modules-right": [
         "network",
         "cpu",
         "memory",
         "temperature",
         "keyboard-state",
+        "bluetooth",
         "pulseaudio",
         "backlight",
         "idle_inhibitor",
         "power-profiles-daemon",
-        "battery"
+        "battery",
     ],
+    "clock": {
+        "timezone": "Asia/Dhaka",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%A, %d %B, %Y}",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -30,13 +37,6 @@
     },
     "tray": {},
     "hyprland/window": {},
-    "clock": {
-        "timezone": "Asia/Dhaka",
-        "format": "{:%I:%M %p}",
-        "format-alt": "{:%A, %d %B, %Y}",
-        "tooltip": true,
-        "tooltip-format": "<tt><small>{calendar}</small></tt>"
-    },
     "network": {
         "format-wifi": " {signalStrength}%",
         "format-ethernet": "",
@@ -44,10 +44,12 @@
         "format-disconnected": "Disconnected",
         "format-alt": "{ipaddr}",
         "tooltip": true,
-        "tooltip-format": "<tt><small>Interface: {ifname}\nESSID: {essid}\nGateway: {gwaddr}\nIP Address: {ipaddr}\nCIDR: {cidr}</small></tt>"
+        "tooltip-format": "Interface: {ifname}\nESSID: {essid}\nGateway: {gwaddr}\nIP Address: {ipaddr}\nCIDR: {cidr}"
     },
     "cpu": {
+        "interval": 1,
         "format": "{usage}% ",
+        "format-alt": "{avg_frequency} GHz ",
         "tooltip": true
     },
     "memory": {
@@ -74,6 +76,12 @@
             "unlocked": ""
         }
     },
+    "bluetooth": {
+        "format": " {device_alias}",
+        "tooltip": true,
+        "tooltip-format": "Controller Alias: {controller_alias}\nController {controller_address_type} Address: {controller_address}\nStatus: {status}\nConnections: {num_connections}\nDevice Alias: {device_alias}\nDevice {device_address_type} Address: {device_address}\nDevice Battery: {device_battery_percentage} %",
+        "on-click": "blueman-manager"
+    },
     "pulseaudio": {
         "scroll-step": 1,
         "format": "{volume}% {icon} {format_source}",
@@ -99,6 +107,8 @@
         "on-click": "pavucontrol"
     },
     "backlight": {
+        "interval": 1,
+        "scroll-step": 1,
         "format": "{percent}% ",
         "tooltip": true
     },
@@ -122,16 +132,18 @@
         "tooltip-format": "Profile: {profile}\nDriver: {driver}"
     },
     "battery": {
+        "interval": 1,
+        "bat-compatibility": true,
+        "weighted-average": true,
         "states": {
-            "good": 80,
             "warning": 25,
             "critical": 10
         },
         "format": "{capacity}% {icon}",
         "format-plugged": "{capacity}% ",
         "format-charging": "{capacity}% ",
-        "format-good": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
+        "format-time": "{H} h {M} min",
         "format-alt": "{time} {icon}",
         "format-icons": [
             "",
@@ -140,6 +152,7 @@
             "",
             ""
         ],
-        "tooltip": true
+        "tooltip": true,
+        "tooltip-format": "Capacity: {capacity}%\nPower: {power} W\n{timeTo}\nCharge Cycles: {cycles}\nHealth: {health}"
     }
 }
