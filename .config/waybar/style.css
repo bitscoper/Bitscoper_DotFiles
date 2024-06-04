@@ -1,0 +1,86 @@
+/* By Abdullah As-Sadeed */
+
+* {
+  border: none;
+  border-radius: 20px;
+  font-family: Font Awesome, Roboto, Arial, sans-serif;
+  color: #ffffff;
+}
+
+window,
+window#waybar {
+  background-color: transparent;
+}
+
+.modules-right {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 2px;
+  margin: 2px 10px 0 0;
+}
+
+.modules-right * {
+  margin: 0 8px;
+}
+
+.modules-center {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 10px;
+  margin: 2px 0 0 0;
+}
+
+.modules-left {
+  background-color: transparent;
+  margin: 2px 0 0 0;
+}
+
+#workspaces {
+  background-color: rgba(33, 33, 33, 0.95);
+  margin: 0 10px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+#workspaces button:hover,
+#workspaces button:focus,
+#workspaces button.focused {
+  background-color: rgba(97, 97, 97, 0.95);
+}
+
+#tray {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 2px;
+}
+
+#tray * {
+  margin: 0 8px;
+}
+
+#window {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+#idle_inhibitor.activated,
+#power-profiles-daemon.performance,
+#battery.charging {
+  color: rgba(0, 192, 0, 0.95);
+}
+
+#power-profiles-daemon.balanced {
+  color: rgba(0, 192, 192, 0.95);
+}
+
+#pulseaudio.muted,
+#power-profiles-daemon.power-saver,
+#battery.warning:not(.charging) {
+  color: rgba(192, 192, 0, 0.95);
+}
+
+#temperature.critical,
+#battery.critical:not(.charging) {
+  color: rgba(192, 0, 0, 0.95);
+}
