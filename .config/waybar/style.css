@@ -7,34 +7,62 @@
   color: rgba(255, 255, 255, 0.95);
 }
 
-window,
 window#waybar {
   background-color: transparent;
 }
 
-.modules-right {
+window#waybar.top .modules-center {
   background-color: rgba(33, 33, 33, 0.95);
-  padding: 0 2px;
-  margin: 2px 10px 0 0;
+  padding: 0 10px;
+  margin: 5px 10px 0 10px;
 }
 
-.modules-right * {
+window#waybar.bottom .modules-center {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 10px;
+  margin: 0 10px 5px 10px;
+}
+
+window#waybar.top .modules-right {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 2px;
+  margin: 5px 5px 0 0;
+}
+
+window#waybar.bottom .modules-right {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 10px;
+  margin: 0 5px 5px 0;
+}
+
+window#waybar.top .modules-left {
+  background-color: rgba(33, 33, 33, 0.95);
+  padding: 0 2px;
+  margin: 5px 0 0 5px;
+}
+
+window#waybar.bottom .modules-left {
+  background-color: transparent;
+  margin: 0 0 5px 5px;
+}
+
+window#waybar.top .modules-right *,
+window#waybar.top .modules-left * {
   margin: 0 8px;
 }
 
-.modules-center {
-  background-color: transparent;
+/*
+tooltip {
 }
 
-.modules-left {
-  background-color: transparent;
-  margin: 2px 0 0 0;
+tooltip label {
 }
+*/
 
-#clock {
-  background-color: rgba(33, 33, 33, 0.95);
-  padding: 0 10px;
-  margin: 0 10px;
+#keyboard-state,
+#privacy {
+  padding: 0;
+  margin: 0;
 }
 
 #workspaces {
@@ -47,29 +75,29 @@ window#waybar {
   padding: 0 4px;
 }
 
-#workspaces button:hover,
-#workspaces button:focus,
-#workspaces button.focused {
+#workspaces button.active,
+#workspaces button.visible {
   background-color: rgba(97, 97, 97, 0.95);
 }
 
-#tray {
+#taskbar {
   background-color: rgba(33, 33, 33, 0.95);
   padding: 0 2px;
   margin: 0 10px 0 0;
 }
 
-#tray * {
+#taskbar button {
+  padding: 0 4px;
   margin: 0 8px;
 }
 
-#window {
+#tray {
   background-color: rgba(33, 33, 33, 0.95);
-  padding: 0 10px;
+  padding: 0 2px;
 }
 
-#keyboard-state {
-  margin: 0;
+#tray * {
+  margin: 0 8px;
 }
 
 #idle_inhibitor.activated,
@@ -78,6 +106,7 @@ window#waybar {
   color: rgba(0, 192, 0, 0.95);
 }
 
+#keyboard-state label.locked,
 #power-profiles-daemon.balanced {
   color: rgba(0, 192, 192, 0.95);
 }
