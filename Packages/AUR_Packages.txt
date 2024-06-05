@@ -17,6 +17,7 @@ mistserver
 onedrive-abraunegg
 openbangla-keyboard-bin
 python-eyed3
+python3.11
 ungoogled-chromium-bin
 virtio-win
 visual-studio-code-bin

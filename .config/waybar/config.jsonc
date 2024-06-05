@@ -56,7 +56,7 @@
             "format-disconnected": "Disconnected",
             "format-alt": "{ipaddr}",
             "tooltip": true,
-            "tooltip-format": "Interface: {ifname}\nESSID: {essid}\nFrequency: {frequency} GHz\nGateway: {gwaddr}\nSubnet Mask: {netmask}\nCIDR: {cidr}\nIP Address: {ipaddr}\nSignal Strength: {signalStrength}% ({signaldBm} dBm)\nUp Bandwidth: {bandwidthUpBytes} bytes/s\nDown Bandwidth: {bandwidthDownBytes} bytes/s\nTotal Bandwidth: {bandwidthTotalBytes} bytes/s"
+            "tooltip-format": "Interface: {ifname}\nESSID: {essid}\nFrequency: {frequency} GHz\nGateway: {gwaddr}\nSubnet Mask: {netmask}\nCIDR: {cidr}\nIP Address: {ipaddr}\nSignal Strength: {signalStrength}% ({signaldBm} dBm)\nUp Bandwidth: {bandwidthUpBytes}\nDown Bandwidth: {bandwidthDownBytes}\nTotal Bandwidth: {bandwidthTotalBytes}"
         },
         "bluetooth": {
             "format": " {status}",

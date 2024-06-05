@@ -39,3 +39,10 @@ sudo pacman -Rsn - <./Unwanted_pacman_Packages.txt
 sudo pacman -Rns $(pacman -Qtdq)
 
 yay -Scc
+
+#Set Default Applications
+xdg-settings set default-web-browser librewolf.desktop
+xdg-mime default librewolf.desktop application/pdf
+xdg-mime default librewolf.desktop image/png
+xdg-mime default librewolf.desktop image/jpg
+xdg-mime default librewolf.desktop image/webp
