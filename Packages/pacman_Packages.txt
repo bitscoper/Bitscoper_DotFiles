@@ -56,6 +56,7 @@ dbeaver-plugin-apache-poi
 dbeaver-plugin-batik
 dbeaver-plugin-office
 dbeaver-plugin-svg-format
+discord
 dmidecode
 dnsmasq
 docker
