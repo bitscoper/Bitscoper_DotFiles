@@ -244,6 +244,7 @@ python
 python-black
 python-brotli
 python-certifi
+python-chardet
 python-defusedxml
 python-docs
 python-dotenv
