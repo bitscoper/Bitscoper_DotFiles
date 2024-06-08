@@ -7,7 +7,7 @@ caprine
 cloudflare-warp-bin
 dmg2img
 easyeda-bin
-flutter-bin
+flutter
 freetube-bin
 hyprpicker
 icecast
