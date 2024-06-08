@@ -15,7 +15,6 @@ librewolf-bin
 librewolf-extension-xdman8-browser-monitor-bin
 mistserver
 onedrive-abraunegg
-openbangla-keyboard-bin
 python-eyed3
 python311
 ungoogled-chromium-bin
