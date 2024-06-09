@@ -111,9 +111,7 @@ hyprlock
 hyprpaper
 iftop
 ifuse
-intel-compute-runtime
 intel-media-driver
-intel-media-sdk
 intel-ucode
 ipp-usb
 iptables-nft
@@ -160,7 +158,6 @@ libssh
 libtheora
 libtiger
 libva-intel-driver
-libva-mesa-driver
 libva-utils
 libvirt
 libvncserver
@@ -187,7 +184,7 @@ mathjax
 mattermost-desktop
 mc
 memcached
-mesa-utils
+mesa
 mlocate
 mythes-en
 nano
@@ -204,7 +201,6 @@ nss-mdns
 obs-studio
 onionshare
 openbsd-netcat
-opencl-rusticl-mesa
 opendkim
 openssh
 opus
@@ -328,7 +324,6 @@ virt-install
 virt-manager
 virt-viewer
 vlc
-vulkan-intel
 vulkan-intel
 vulscan
 waybar
