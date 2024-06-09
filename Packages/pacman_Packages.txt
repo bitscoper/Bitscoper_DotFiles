@@ -49,7 +49,6 @@ cups-pdf
 cups-pk-helper
 curl
 curtail
-cvs
 dav1d
 dbeaver
 dbeaver-plugin-apache-poi
@@ -120,11 +119,10 @@ jdk-openjdk
 jellyfin-ffmpeg
 jellyfin-server
 jellyfin-web
-jq
 kitty
 kvantum
 lame
-lha
+lhasa
 libavif
 libcec
 libde265
@@ -160,7 +158,6 @@ libtiger
 libva-intel-driver
 libva-utils
 libvirt
-libvncserver
 libvorbis
 libvpx
 libwebp
@@ -180,13 +177,11 @@ man-db
 mariadb
 mariadb-clients
 mariadb-libs
-mathjax
 mattermost-desktop
 mc
 memcached
 mesa
 mlocate
-mythes-en
 nano
 neofetch
 net-tools
@@ -215,7 +210,6 @@ php-fpm
 php-gd
 php-memcached
 php-pgsql
-picom
 pigz
 pipewire
 pipewire-alsa
@@ -331,11 +325,9 @@ wayland-docs
 wget
 wireplumber
 wireshark-qt
-wofi
 x264
 x265
 xarchiver
-xcompmgr
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
 xdg-user-dirs
