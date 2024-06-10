@@ -8,7 +8,6 @@ archlinux-wallpaper
 arduino
 arduino-avr-core
 arduino-cli
-arduino-docs
 arduino-language-server
 aribb25
 audacity
