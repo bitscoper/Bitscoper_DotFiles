@@ -3,10 +3,8 @@ anydesk-bin
 bitscoper-cyber-toolbox-bin
 bitscoper-usb-logger
 butt-appimage
-caprine
 cloudflare-warp-bin
 dmg2img
-easyeda-bin
 flutter
 freetube-bin
 hyprpicker
