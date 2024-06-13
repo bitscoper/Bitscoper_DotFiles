@@ -9,8 +9,6 @@ flutter
 freetube-bin
 hyprpicker
 icecast
-librewolf-bin
-librewolf-extension-xdman8-browser-monitor-bin
 mistserver
 onedrive-abraunegg
 python-eyed3

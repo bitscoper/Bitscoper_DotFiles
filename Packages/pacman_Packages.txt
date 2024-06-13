@@ -118,7 +118,6 @@ jellyfin-ffmpeg
 jellyfin-server
 jellyfin-web
 kitty
-kvantum
 lame
 lhasa
 libavif

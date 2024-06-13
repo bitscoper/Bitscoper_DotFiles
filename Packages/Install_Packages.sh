@@ -41,8 +41,8 @@ sudo pacman -Rns $(pacman -Qtdq)
 yay -Scc
 
 #Set Default Applications
-xdg-settings set default-web-browser librewolf.desktop
-xdg-mime default librewolf.desktop application/pdf
-xdg-mime default librewolf.desktop image/png
-xdg-mime default librewolf.desktop image/jpg
-xdg-mime default librewolf.desktop image/webp
+xdg-settings set default-web-browser firefox-developer-edition.desktop
+xdg-mime default firefox-developer-edition.desktop application/pdf
+xdg-mime default firefox-developer-edition.desktop image/png
+xdg-mime default firefox-developer-edition.desktop image/jpg
+xdg-mime default firefox-developer-edition.desktop image/webp
