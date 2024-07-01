@@ -1,0 +1,275 @@
+// -*- mode: jsonc -*-
+// By Abdullah As-Sadeed
+[
+    {
+        "name": "top",
+        "reload_style_on_change": true,
+        "exclusive": true,
+        "layer": "top",
+        "position": "top",
+        "fixed-center": true,
+        "start_hidden": false,
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+            "network",
+            "bluetooth",
+            "cpu",
+            "memory",
+            "disk",
+            "temperature",
+            "user",
+            "battery"
+        ],
+        "modules-left": [
+            "systemd-failed-units",
+            "keyboard-state",
+            "idle_inhibitor",
+            "power-profiles-daemon",
+            "backlight",
+            "pulseaudio",
+            "privacy"
+        ],
+        "clock": {
+            "interval": 1,
+            "timezone": "Asia/Dhaka",
+            "format": "{:%I:%M %p}",
+            "format-alt": "{:%A, %d %B, %Y}",
+            "tooltip": true,
+            "tooltip-format": "<tt><small>{calendar}</small></tt>",
+            "calendar": {
+                "mode": "year",
+                "mode-mon-col": 3,
+                "weeks-pos": "right",
+                "format": {
+                    "today": "<b><u>{}</u></b>",
+                    "weeks": "W{}"
+                }
+            }
+        },
+        "network": {
+            "interval": 1,
+            "format-wifi": " {signalStrength}%",
+            "format-ethernet": "",
+            "format-linked": "(No IP)",
+            "format-disconnected": "Disconnected",
+            "format-alt": "{ipaddr}",
+            "tooltip": true,
+            "tooltip-format": "Interface: {ifname}\nESSID: {essid}\nFrequency: {frequency} GHz\nGateway: {gwaddr}\nSubnet Mask: {netmask}\nCIDR: {cidr}\nIP Address: {ipaddr}\nSignal Strength: {signalStrength}% ({signaldBm} dBm)\nUp Bandwidth: {bandwidthUpBytes}\nDown Bandwidth: {bandwidthDownBytes}\nTotal Bandwidth: {bandwidthTotalBytes}"
+        },
+        "bluetooth": {
+            "format": " {status}",
+            "format-connected": " {device_alias}",
+            "tooltip": true,
+            "tooltip-format": "Controller Alias: {controller_alias}\nController {controller_address_type} Address: {controller_address}\nStatus: {status}\nConnections: {num_connections}\nDevice Alias: {device_alias}\nDevice {device_address_type} Address: {device_address}\nDevice Battery: {device_battery_percentage} %",
+            "on-click": "blueman-manager"
+        },
+        "cpu": {
+            "interval": 1,
+            "format": "{usage}% ",
+            "format-alt": "{avg_frequency} GHz ",
+            "tooltip": true
+        },
+        "memory": {
+            "interval": 1,
+            "format": "{percentage}% ",
+            "format-alt": "{used} GiB ",
+            "tooltip": true,
+            "tooltip-format": "Total RAM: {total} GiB\nUsed RAM: {percentage}% ({used} GiB)\nFree RAM: {avail} GiB\nTotal Swap: {swapTotal} GiB\nUsed Swap: {swapPercentage}% ({swapUsed} GiB)\nFree Swap: {swapAvail} GiB"
+        },
+        "disk": {
+            "interval": 1,
+            "unit": "GB",
+            "format": "{percentage_used}% ",
+            "tooltip": true,
+            "tooltip-format": "Total: {total}\nUsed: {percentage_used}% ({used})\nFree: {percentage_free}% ({free})",
+            "on-click": "thunar"
+        },
+        "temperature": {
+            "interval": 1,
+            "critical-threshold": 70,
+            "format": "{temperatureC}°C {icon}",
+            "format-critical": "{temperatureC}°C {icon}",
+            "format-icons": [
+                "",
+                "",
+                ""
+            ],
+            "tooltip": true,
+            "tooltip-format": "{temperatureC}°C\n{temperatureF}°F\n{temperatureK} K"
+        },
+        "user": {
+            "interval": 1,
+            "format": "{work_d}:{work_H}:{work_M}"
+        },
+        "battery": {
+            "interval": 1,
+            "bat-compatibility": true,
+            "weighted-average": true,
+            "states": {
+                "warning": 25,
+                "critical": 10
+            },
+            "format": "{capacity}% {icon}",
+            "format-plugged": "{capacity}% ",
+            "format-charging": "{capacity}% ",
+            "format-full": "{capacity}% {icon}",
+            "format-time": "{H}:{M}",
+            "format-alt": "{time} {icon}",
+            "format-icons": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "tooltip": true,
+            "tooltip-format": "Capacity: {capacity}%\nPower: {power} W\n{timeTo}\nCharge Cycles: {cycles}\nHealth: {health}"
+        },
+        "systemd-failed-units": {
+            "hide-on-ok": false,
+            "system": true,
+            "user": true,
+            "format": "✗ {nr_failed}",
+            "format-ok": "✓"
+        },
+        "keyboard-state": {
+            "capslock": true,
+            "numlock": true,
+            "scrolllock": true,
+            "format": "{name} {icon}",
+            "format-icons": {
+                "locked": "",
+                "unlocked": ""
+            }
+        },
+        "idle_inhibitor": {
+            "start-activated": true,
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            },
+            "tooltip": true,
+            "tooltip-format-activated": "{status}",
+            "tooltip-format-deactivated": "{status}"
+        },
+        "power-profiles-daemon": {
+            "format": "{icon}",
+            "format-icons": {
+                "default": "",
+                "performance": "",
+                "balanced": "",
+                "power-saver": ""
+            },
+            "tooltip": true,
+            "tooltip-format": "Profile: {profile}\nDriver: {driver}"
+        },
+        "backlight": {
+            "interval": 1,
+            "scroll-step": 1,
+            "format": "{percent}% ",
+            "tooltip": true
+        },
+        "pulseaudio": {
+            "scroll-step": 1,
+            "format": "{volume}% {icon} {format_source}",
+            "format-muted": " {format_source}",
+            "format-bluetooth": "{volume}% {icon}  {format_source}",
+            "format-bluetooth-muted": " {icon}  {format_source}",
+            "format-source": "{volume}% ",
+            "format-source-muted": "",
+            "format-icons": {
+                "car": "",
+                "hands-free": "",
+                "headphone": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "default": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "tooltip": true,
+            "tooltip-format": "{desc}",
+            "on-click": "pavucontrol"
+        },
+        "privacy": {
+            "modules": [
+                {
+                    "type": "screenshare",
+                    "tooltip": true
+                },
+                {
+                    "type": "audio-out",
+                    "tooltip": true
+                },
+                {
+                    "type": "audio-in",
+                    "tooltip": true
+                }
+            ]
+        }
+    },
+    {
+        "name": "bottom",
+        "reload_style_on_change": true,
+        "exclusive": true,
+        "layer": "top",
+        "position": "bottom",
+        "fixed-center": true,
+        "start_hidden": false,
+        "modules-center": [
+            "mpris"
+        ],
+        "modules-right": [
+            "hyprland/window"
+        ],
+        "modules-left": [
+            "hyprland/workspaces",
+            "wlr/taskbar",
+            "tray"
+        ],
+        "mpris": {
+            "interval": 1,
+            "format": "{player} ({status}): {dynamic}",
+            "dynamic-order": [
+                "position",
+                "length"
+            ],
+            "dynamic-importance-order": [
+                "position",
+                "length"
+            ],
+            "dynamic-separator": " - ",
+            "dynamic-len": -1,
+            "ellipsis": "...",
+            "tooltip-format": "Player: {player}\nStatus: {status}\nTitle: {title}\nArtist: {artist}\nAlbum: {album}\nPosition: {position}\nLength: {length}"
+        },
+        "hyprland/window": {},
+        "hyprland/workspaces": {
+            "show-special": true,
+            "all-outputs": true,
+            "active-only": false,
+            "format": "{icon}",
+            "format-icons": {
+                "special": "S"
+            },
+            "on-click": "activate",
+            "on-scroll-up": "hyprctl dispatch workspace e+1",
+            "on-scroll-down": "hyprctl dispatch workspace e-1"
+        },
+        "wlr/taskbar": {
+            "all-outputs": true,
+            "format": "{icon}",
+            "tooltip": true,
+            "tooltip-format": "{title}"
+        },
+        "tray": {
+            "show-passive-items": true
+        }
+    }
+]

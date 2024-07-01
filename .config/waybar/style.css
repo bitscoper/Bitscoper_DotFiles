@@ -1,0 +1,132 @@
+/* By Abdullah As-Sadeed */
+
+@import url("./colors.css");
+
+* {
+  border: none;
+  border-radius: 20px;
+  font-family: Font Awesome, Roboto, Arial, sans-serif;
+  color: @foreground;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+window#waybar.top .modules-center {
+  background-color: @background;
+  padding: 0 10px;
+  margin: 5px 10px 0 10px;
+}
+
+window#waybar.bottom .modules-center {
+  background-color: @background;
+  padding: 0 10px;
+  margin: 0 10px 5px 10px;
+}
+
+window#waybar.top .modules-right {
+  background-color: @background;
+  padding: 0 2px;
+  margin: 5px 5px 0 0;
+}
+
+window#waybar.bottom .modules-right {
+  background-color: @background;
+  padding: 0 10px;
+  margin: 0 5px 5px 0;
+}
+
+window#waybar.top .modules-left {
+  background-color: @background;
+  padding: 0 2px;
+  margin: 5px 0 0 5px;
+}
+
+window#waybar.bottom .modules-left {
+  background-color: transparent;
+  margin: 0 0 5px 5px;
+}
+
+window#waybar.top .modules-right *,
+window#waybar.top .modules-left * {
+  margin: 0 8px;
+}
+
+/*
+tooltip {
+}
+
+tooltip label {
+}
+*/
+
+#keyboard-state,
+#privacy {
+  padding: 0;
+  margin: 0;
+}
+
+#workspaces {
+  background-color: @background;
+  margin: 0 10px 0 0;
+}
+
+#workspaces button {
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+#workspaces button.active,
+#workspaces button.visible {
+  background-color: @background-darker;
+}
+
+
+#taskbar {
+  background-color: @background;
+  padding: 0 2px;
+  margin: 0 10px 0 0;
+}
+
+#taskbar button {
+  padding: 0 4px;
+  margin: 0 8px;
+}
+
+#tray {
+  background-color: @background;
+  padding: 0 2px;
+}
+
+#tray * {
+  margin: 0 8px;
+}
+
+#keyboard-state label.locked {
+  color: @cyan;
+}
+
+#idle_inhibitor.activated,
+#power-profiles-daemon.performance,
+#battery.charging {
+  color: @green;
+}
+
+#power-profiles-daemon.balanced {
+  color: @orange;
+}
+
+#pulseaudio.muted,
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @pink;
+}
+
+#temperature.critical,
+#battery.critical:not(.charging) {
+  color: @red;
+}

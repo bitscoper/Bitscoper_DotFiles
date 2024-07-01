@@ -1,0 +1,16 @@
+android-studio
+bitscoper-cyber-toolbox-bin
+bitscoper-usb-logger
+cloudflare-warp-bin
+dmg2img
+flutter
+gpredict-git
+hyprpicker
+icecast
+mistserver
+onedrive-abraunegg
+python-eyed3
+sdrangel-bin
+virtio-win-stable
+yay-bin
+zenmap
